@@ -296,12 +296,17 @@ p.text-margin {
     margin-top: 20px;
 }
 
+.catalog .container::after {
+    content: '';
+    clear: both;
+    display: block;
+}
+
 .sidebar {
     float: left;
     width: 310px;
     background-color: #FBFBFB;
     padding: 14px 18px;
-    margin-right: 50px;
 }
 
 .sidebar h2 {
@@ -357,6 +362,8 @@ p.text-margin {
 .content {
     float: right;
     width: 800px;
+    width: calc(100% - 310px);
+    padding-left: 50px;
 }
 
 .filter ul {
