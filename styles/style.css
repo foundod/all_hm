@@ -1,76 +1,58 @@
 @font-face {
     font-family: 'Cera Pro';
-    src: url('../fonts/Cera Pro/CeraPro-Light.eot');
     src: local('../fonts/Cera Pro/Cera Pro Light'), local('CeraPro-Light'),
-        url('../fonts/Cera Pro/CeraPro-Light.eot?#iefix') format('embedded-opentype'),
         url('../fonts/Cera Pro/CeraPro-Light.woff2') format('woff2'),
-        url('../fonts/Cera Pro/CeraPro-Light.woff') format('woff'),
-        url('../fonts/Cera Pro/CeraPro-Light.ttf') format('truetype');
+        url('../fonts/Cera Pro/CeraPro-Light.woff') format('woff');
     font-weight: 300;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Cera Pro';
-    src: url('../fonts/Cera Pro/CeraPro-Medium.eot');
     src: local('Cera Pro Medium'), local('CeraPro-Medium'),
-        url('../fonts/Cera Pro/CeraPro-Medium.eot?#iefix') format('embedded-opentype'),
         url('../fonts/Cera Pro/CeraPro-Medium.woff2') format('woff2'),
-        url('../fonts/Cera Pro/CeraPro-Medium.woff') format('woff'),
-        url('../fonts/Cera Pro/CeraPro-Medium.ttf') format('truetype');
+        url('../fonts/Cera Pro/CeraPro-Medium.woff') format('woff');
     font-weight: 500;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Cera Pro';
-    src: url('../fonts/Cera Pro/CeraPro-Bold.eot');
     src: local('Cera Pro Bold'), local('CeraPro-Bold'),
-        url('../fonts/Cera Pro/CeraPro-Bold.eot?#iefix') format('embedded-opentype'),
         url('../fonts/Cera Pro/CeraPro-Bold.woff2') format('woff2'),
-        url('../fonts/Cera Pro/CeraPro-Bold.woff') format('woff'),
-        url('../fonts/Cera Pro/CeraPro-Bold.ttf') format('truetype');
+        url('../fonts/Cera Pro/CeraPro-Bold.woff') format('woff');
     font-weight: 700;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Cera Pro';
-    src: url('../fonts/Cera Pro/CeraPro-Black.eot');
     src: local('Cera Pro Black'), local('CeraPro-Black'),
-        url('../fonts/Cera Pro/CeraPro-Black.eot?#iefix') format('embedded-opentype'),
         url('../fonts/Cera Pro/CeraPro-Black.woff2') format('woff2'),
-        url('../fonts/Cera Pro/CeraPro-Black.woff') format('woff'),
-        url('../fonts/Cera Pro/CeraPro-Black.ttf') format('truetype');
+        url('../fonts/Cera Pro/CeraPro-Black.woff') format('woff');
     font-weight: 900;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Cera Pro';
-    src: url('../fonts/Cera Pro/CeraPro-Regular.eot');
     src: local('Cera Pro Regular'), local('CeraPro-Regular'),
-        url('../fonts/Cera Pro/CeraPro-Regular.eot?#iefix') format('embedded-opentype'),
         url('../fonts/Cera Pro/CeraPro-Regular.woff2') format('woff2'),
-        url('../fonts/Cera Pro/CeraPro-Regular.woff') format('woff'),
-        url('../fonts/Cera Pro/CeraPro-Regular.ttf') format('truetype');
+        url('../fonts/Cera Pro/CeraPro-Regular.woff') format('woff');
     font-weight: 400;
     font-style: normal;
 }
 
 body {
-    font-family: 'Cera Pro';
+    font-family: 'Cera Pro', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    background-color: #f5f5f5; 
 }
 
 * {
     box-sizing: border-box;
-}
-
-#main {
-    background-color: #f5f5f5; 
-    font-family: sans-serif; 
-    margin: 0; 
-    padding: 0;
 }
 
 .main_container {
@@ -228,6 +210,10 @@ p.text-margin {
     line-height: 20px;
 }
 
+.button:hover {
+    background: rgba(70, 163, 88, .8);
+}
+
 .button.button__shop {
     padding: 11px 26px;
 }
@@ -307,6 +293,13 @@ p.text-margin {
     width: 310px;
     background-color: #FBFBFB;
     padding: 14px 18px;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 40px;
+}
+
+.sidebar nav {
+    margin-bottom: 50px;
 }
 
 .sidebar h2 {
@@ -317,9 +310,6 @@ p.text-margin {
 }
 
 .sidebar a {
-    font-weight: 400;
-    font-size: 15px;
-    line-height: 40px;
     margin-left: 12px;
     color: #3D3D3D;
     text-decoration: none; 
@@ -332,7 +322,6 @@ p.text-margin {
 
 .sale_banner {
     width: 100%;
-    margin-top: 377px;
 }
 
 .filter li {
@@ -354,9 +343,24 @@ p.text-margin {
     border-bottom: 2px solid #46A358;
 }
 
+.filter a:hover {
+    font-weight: 700;
+    color: #46A358;
+}
+
 .sorting {
     display: inline-block;
     margin-left: 100px;
+}
+
+.sorting::after {
+    content: '';
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    background: url('../images/arrow_down.svg');
+    background-size: cover;
+    vertical-align: middle;
 }
 
 .content {
@@ -438,4 +442,9 @@ p.text-margin {
     background-color: #46A358;
     color: #FFFFFF;
     border-color: #46A358;
+}
+
+.pagination a:hover {
+    background-color: #46A358;
+    color: #FFFFFF;
 }
