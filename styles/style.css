@@ -208,6 +208,8 @@ p.text-margin {
     vertical-align: middle;
     font-size: 16;
     line-height: 20px;
+    display: flex;
+    align-items: center;
 }
 
 .button:hover {
@@ -280,17 +282,18 @@ p.text-margin {
 
 .catalog {
     margin-top: 20px;
+    margin-bottom: 60px;
 }
 
-.catalog .container::after {
-    content: '';
-    clear: both;
-    display: block;
+.catalog .container {
+    display: flex;
 }
 
 .sidebar {
-    float: left;
-    width: 310px;
+    display: flex;
+    flex-direction: column;
+    flex-basis: 310px;
+    flex-shrink: 0;
     background-color: #FBFBFB;
     padding: 14px 18px;
     font-weight: 400;
@@ -322,6 +325,12 @@ p.text-margin {
 
 .sale_banner {
     width: 100%;
+    margin-top: auto;
+}
+
+.filter {
+    display: flex;
+    align-items: center;
 }
 
 .filter li {
@@ -350,7 +359,7 @@ p.text-margin {
 
 .sorting {
     display: inline-block;
-    margin-left: 100px;
+    margin-left: auto;
 }
 
 .sorting::after {
@@ -364,7 +373,6 @@ p.text-margin {
 }
 
 .content {
-    float: right;
     width: 800px;
     width: calc(100% - 310px);
     padding-left: 50px;
@@ -377,16 +385,23 @@ p.text-margin {
 .products {
     margin-top: 31px;
     margin-bottom: 90px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    row-gap: 70px;
+    column-gap: 33px;
+    box-sizing: border-box;
 }
 
 .product {
-    margin-right: 12px;
+    width: calc(33% - 20px);
+    box-sizing: border-box;
 }
 
 .product_image {
     background-color: #FBFBFB;
-    width: 258px;
-    height: 300px;
+    width: 100%;
 }
 
 .product_image img {
@@ -413,7 +428,8 @@ p.text-margin {
 }
 
 .pagination {
-    float: right;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .pagination li {
@@ -447,4 +463,144 @@ p.text-margin {
 .pagination a:hover {
     background-color: #46A358;
     color: #FFFFFF;
+}
+
+.flovers {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 28px;
+    margin-bottom: 138px;
+    gap: 12px;
+}
+
+.flover-card {
+    width: calc(50% - 12px);
+    background-color: #FBFBFB;
+    padding: 10px 30px;
+    display: flex;
+    padding-left: 0px;
+}
+
+.flover-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    white-space: nowrap;
+    width: 47%;
+}
+
+.flover-text h3 {
+    font-size: 18px;
+    font-weight: 900;
+    line-height: 24px;
+    color: #3D3D3D;
+    text-transform: uppercase;
+    text-align: right;
+    margin-bottom: 9px;
+}
+
+.flover-text p {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #727272;
+    text-align: right;
+    margin-bottom: 9px;
+}
+
+.flover-text a::after {
+    content: '';
+    background-image: url("../images/arrow_right_white.svg");
+    width: 18px;
+    height: 18px;
+    display: block;
+    margin-right: 2px;
+}
+
+.flover-card img {
+    mix-blend-mode: multiply;
+}
+
+.blog-tittle {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 16px;
+    text-align: center;
+    color: #3D3D3D;
+    margin-bottom: 15px;
+}
+
+.blog-text {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: center;
+    color: #727272;
+    margin-bottom: 35px;
+}
+
+.posts {
+    display: flex;
+    gap: 44px;
+    margin-bottom: 68px;
+}
+
+.post {
+    background-color: #FBFBFB;
+}
+
+.post-text {
+    padding: 8px 13px;
+}
+
+.post-text p {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    text-align: left;
+    color: #727272;
+    margin-bottom: 9px;
+}
+
+.post-text p.post-date {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16px;
+    text-align: left;
+    color: #46A358;
+    margin-bottom: 4px;
+}
+
+.post-text h3 {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 26px;
+    text-align: left;
+    color: #3D3D3D;
+    margin-bottom: 4px;
+}
+
+.post-text a {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16px;
+    text-align: left;
+    color: #3D3D3D;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+
+.post-text a::after {
+    content: '';
+    background-image: url("../images/arrow_right_silver.svg");
+    width: 16px;
+    height: 16px;
+    display: block;
+}
+
+.post-text a:hover{
+    color: #46A358;
 }
