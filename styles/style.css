@@ -400,6 +400,7 @@ p.text-margin {
 .product {
     width: calc(33% - 20px);
     box-sizing: border-box;
+    text-decoration: none;
 }
 
 .product_image {
