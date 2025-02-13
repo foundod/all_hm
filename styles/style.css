@@ -177,10 +177,9 @@ p.text-margin {
 
 .navigation a {
     font-size: 16px;
-    font-weight: 700;
     line-height: 20px;
-    color: #3D3D3D;
     text-decoration: none; 
+    color: inherit;
 }
 
 .navigation ul {
@@ -192,11 +191,75 @@ p.text-margin {
     display: inline-block;
     margin: 0 25px;
     padding: 25px 0;
+    position: relative;
+    font-weight: 400;
+    color: #3D3D3D;
 }
 
 .navigation li.active {
     border-bottom: 3px solid #46A358;
+    font-weight: 700;
 }
+
+.navigation li:hover > .sub_menu {
+    display: block;
+}
+
+.navigation li:hover > a img {
+    transform: rotate(180deg);
+}
+
+.navigation li:hover {
+    border-bottom: 3px solid #46A358;
+}
+
+.navigation li:hover > a {
+    font-weight: 700;
+}
+
+.sub_menu {
+    background-color: #EDF6EE;
+    position: absolute;
+    left: 50%;
+    top: calc(100% + 2px);
+    transform: translateX(-50%);
+    min-width: 188px;
+    display: none;
+}
+
+.sub_menu li {
+    text-align: left;
+    margin: 0%;
+    width: 100%;
+    padding: 0%;
+    position: static;
+}
+
+.sub_menu li a {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    padding: 9px 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: background-color .2s linear, color .2s linear;
+}
+
+.sub_menu li:hover {
+    background-color: #1A712A;
+    color:#FFFFFF;
+    border-bottom: 0;
+}
+
+.sub_menu_second {
+    background-color: #EDF6EE;
+    top: 0%;
+    min-width: 188px;
+    left: 100%;
+    transform: translateX(0);
+    display: none;
+}   
 
 .button {
     background-color: #46A358;
