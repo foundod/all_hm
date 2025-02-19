@@ -103,7 +103,6 @@ body {
 
 p {
     font-size: 13px; 
-    font-weight: 400; 
     line-height: 16px; 
     color:#3D3D3D;
 }
@@ -192,7 +191,6 @@ p.text-margin {
     margin: 0 25px;
     padding: 25px 0;
     position: relative;
-    font-weight: 400;
     color: #3D3D3D;
 }
 
@@ -236,7 +234,6 @@ p.text-margin {
 }
 
 .sub_menu li a {
-    font-weight: 400;
     font-size: 16px;
     line-height: 20px;
     padding: 9px 14px;
@@ -330,7 +327,6 @@ p.text-margin {
 
 .banner__description {
     font-size: 14px;
-    font-weight: 400;
     line-height: 24px;
     color: #727272;
     margin-bottom: 44px;
@@ -351,7 +347,7 @@ p.text-margin {
     margin-bottom: 60px;
 }
 
-.catalog .container {
+.catalog__container {
     display: flex;
 }
 
@@ -362,7 +358,6 @@ p.text-margin {
     flex-shrink: 0;
     background-color: #FBFBFB;
     padding: 14px 18px;
-    font-weight: 400;
     font-size: 15px;
     line-height: 40px;
 }
@@ -405,7 +400,6 @@ p.text-margin {
 
 .filter a {
     text-decoration: none; 
-    font-weight: 400;
     font-size: 15px;
     line-height: 16px;
     color: #3D3D3D;
@@ -538,7 +532,6 @@ p.text-margin {
     margin-top: 12px;
     color: #3D3D3D;
     font-size: 16px;
-    font-weight: 400;
     line-height: 16px;
     margin-bottom: 6px;
 }
@@ -621,7 +614,6 @@ p.text-margin {
 
 .flover-text p {
     font-size: 14px;
-    font-weight: 400;
     line-height: 24px;
     color: #727272;
     margin-bottom: 9px;
@@ -651,7 +643,6 @@ p.text-margin {
 
 .blog-text {
     font-size: 14px;
-    font-weight: 400;
     line-height: 24px;
     text-align: center;
     color: #727272;
@@ -673,7 +664,6 @@ p.text-margin {
 .post-text {
     padding: 8px 13px;
     font-size: 14px;
-    font-weight: 400;
     line-height: 22px;
     text-align: left;
     color: #727272;
@@ -743,20 +733,15 @@ footer h3 {
 }
 
 footer p {
-    font-weight: 400;
     font-size: 14px;
     line-height: 22px;
     color: #727272;
 }
 
-.footer-flover img {
-    margin-bottom: 15px;
-    margin-left: 15px;
-}
-
 .footer-flover {
     position: relative;
     padding: 25px;
+    width: 52%;
 }
 
 .footer-flover::after {
@@ -774,21 +759,35 @@ footer p {
     content: none;
 }
 
-.footer-flover::before {
+.footer-flover-img {
+    position: relative;
+    margin-bottom: 15px;
+    margin-left: 15px;
+}
+
+.footer-flover-img::before {
     content: "";
     width: 74px;
     height: 76px;
     background-color: #46A35821;
-    display: block;
     border-radius: 50px;
     position: absolute;
-    top: 45px;
-    left: 25px;
 }
 
-.footer-flover:nth-child(3)::before {
-    top: 42px;
-    left: 30px;
+
+.footer-flover:nth-child(1) .footer-flover-img::before {
+    bottom: -2px;
+    left: -17px;
+}
+
+.footer-flover:nth-child(2) .footer-flover-img::before {
+    bottom: -4px;
+    left: -15px;
+}
+
+.footer-flover:nth-child(3) .footer-flover-img::before {
+    bottom: -5px;
+    left: -7px;
 }
 
 .footer-form {
@@ -797,10 +796,8 @@ footer p {
 
 .footer-form form {
     margin: 25px 0 16px;
-    height: 40px;
     box-shadow: 0px 0px 20px 0px #0000000F;
     display: flex;
-    align-items: center;
     border-radius: 6px;
     overflow: hidden;
 }
@@ -808,10 +805,6 @@ footer p {
 .footer-form input {
     background-color: #FFFFFF;
     color: #ACACAC;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 16px;
-    height: 100%;
     width: 100%;
     border: 0;
     padding-left: 11px;
@@ -829,10 +822,14 @@ footer p {
     line-height: 16px;
     color: #FFFFFF;
     border: 0;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.footer-form button:hover {
+    background: rgba(70, 163, 88, .8);
 }
 
 .footer-form p {
-    font-weight: 400;
     font-size: 13px;
     line-height: 22px;
 }
@@ -850,6 +847,7 @@ footer p {
     max-width: 205px;
     gap: 9px;
     color: #3D3D3D;
+    text-decoration: none;
 }
 
 .footer-social p {
@@ -862,12 +860,8 @@ footer p {
 }
 
 .footer-navigation {
-    display: flex;
-    flex-direction: column;
     flex-basis: 310px;
     flex-shrink: 0;
-    background-color: #FBFBFB;
-    font-weight: 400;
     font-size: 15px;
     line-height: 30px;
 }
@@ -890,8 +884,6 @@ footer p {
 }
 
 .footer-copy {
-    font-weight: 400;
-    font-size: 14px;
     line-height: 30px;
     color: #3D3D3D;
     text-align: center;
