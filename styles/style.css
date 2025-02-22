@@ -312,6 +312,7 @@ p.text-margin {
     width: 100%;
     padding: 0%;
     position: static;
+    border-bottom: 0;
 }
 
 .sub_menu li a {
@@ -603,12 +604,12 @@ p.text-margin {
     transition: opacity 0.3s ease-in-out;
 }
 
-.product_button:hover {
-    background-color: rgba(70, 163, 88, .7);
+.product_button i {
+    color: black;
 }
 
-.product_button:hover svg {
-    opacity: 0.5;
+.product_button:hover i {
+    color: #46A358;
 }
 
 .product_button svg {
