@@ -1081,7 +1081,7 @@ footer p {
     height: 24px;
     transition: background-color 0.3s ease-in;
     z-index: 2;
-    display: block;
+    display: none;
 }
 
 .burger::before {
@@ -1276,6 +1276,9 @@ label:has(input[type="checkbox"]:checked) + .main-menu {
     }
     .navigation {
         display: none;
+    }
+    .burger {
+        display: block;
     }
     .header__container {
         padding: 20px 12px;
