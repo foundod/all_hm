@@ -1081,6 +1081,7 @@ footer p {
     height: 24px;
     transition: background-color 0.3s ease-in;
     z-index: 2;
+    display: block;
 }
 
 .burger::before {
@@ -1121,20 +1122,20 @@ input[type="checkbox"] {
     left: -9999px;
 }
 
-input[type="checkbox"]:checked + .burger{
+label:has(input[type="checkbox"]:checked) {
     background-color: #8ee7a0cb;
 }
 
-input[type="checkbox"]:checked+.burger::before {
+label:has(input[type="checkbox"]:checked)::before {
     transform: rotate(45deg) translate(8px, 7px);
     background-color: white;
 }
 
-input[type="checkbox"]:checked+.burger span {
+label:has(input[type="checkbox"]:checked) span {
     opacity: 0;
 }
 
-input[type="checkbox"]:checked+.burger::after {
+label:has(input[type="checkbox"]:checked)::after {
     transform: rotate(-45deg) translate(7px, -7px);
     background-color: white;
 }
