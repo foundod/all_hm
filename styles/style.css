@@ -153,6 +153,7 @@ body {
     display: flex; 
     justify-content: center;
     align-items: center;
+    margin: 0 auto;
 }
 
 .close-button {
@@ -257,6 +258,10 @@ p.text-margin {
     width: 150px;
 }
 
+.logo img {
+    width: 100%;
+}
+
 .navigation a {
     font-size: 16px;
     line-height: 20px;
@@ -345,7 +350,6 @@ p.text-margin {
     justify-content: flex-end;
     align-items: center;
     gap: 30px;
-    margin-left: auto;
     margin-right: 20px;
 }
 
@@ -414,6 +418,7 @@ p.text-margin {
     align-items: flex-start;
     vertical-align: middle;
     margin-right: auto;
+    max-width: 52%;
 }
 
 .banner__welcome {
@@ -1214,27 +1219,23 @@ label:has(input[type="checkbox"]:checked) + .main-menu {
             gap: 24px;
         }
     .post {
-           width: calc(33% - 24px);
+           width: calc((100% - 72px) / 4);
         }
 }
 
 @media screen and (max-width: 1024px) {
     .sidebar {
-        width: 100%;
+        flex-basis: 220px;
     }
     .products {
         width: 100%;
         row-gap: 40px;
     }
-    .catalog__container {
-        flex-direction: column-reverse;
-    }
     .content {
-        padding-left: 0;
+        padding-left: 24px;
         width: 100%;
     }
     .product {
-        width: calc(25% - 25px);
         display: block;
     }
     .header__container {
@@ -1271,8 +1272,13 @@ label:has(input[type="checkbox"]:checked) + .main-menu {
 }
 
 @media screen and (max-width: 992px) {
+    .banner__tittle {
+        font-size: 50px;
+        max-width: 400px;
+        line-height: 120%;
+    }
     .sale_banner {
-            max-width: 450px;
+        max-width: 450px;
     }
     .navigation {
         display: none;
@@ -1286,6 +1292,25 @@ label:has(input[type="checkbox"]:checked) + .main-menu {
     .footer-links {
         margin-right: 0;
     }
+    .footer-middle .logo {
+        width: 120px;
+    }
+    .footer-social p {
+        font-size: 13px;
+    }
+    .header-buttons {
+        margin-left: auto;
+    }
+    .post {
+        width: calc(50% - 13px);
+    }
+    .product {
+        width: calc((100% - 68px ) /3);
+    }
+    .footer-form {
+        max-width: 450px;
+        margin: auto;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -1295,21 +1320,25 @@ label:has(input[type="checkbox"]:checked) + .main-menu {
     }
     .banner__container {
         flex-direction: column;
+        padding: 40px 12px;
     }
     .banner__image {
         width: 100%;
         max-width: 400px;
+        display: none;
     }
     .banner__text {
         margin: 0%;
         text-align: center;
         align-items: center;
+        max-width: 350px;
     }
     .banner__description {
         margin-bottom: 12px;
     }
     .sale_banner {
-            max-width: 350px;
+        max-width: 350px;
+        margin: 0 auto;
     }
     .footer-middle {
         flex-direction: column;
@@ -1319,26 +1348,63 @@ label:has(input[type="checkbox"]:checked) + .main-menu {
         margin-bottom: 18px;
     }
     .footer-middle .logo {
-        width: 100%;
         display: flex;
         align-items: center;
         justify-content: center;
-        margin-bottom: 24px;
+        margin: 0 auto 24px;
     }
     .footer-bottom {
         flex-wrap: wrap;
+        padding: 24px 24px;
     }
     .footer-links {
         margin-right: 0;
         width: 100%;
         margin-top: 36px;
     }
-    .product {
-        width: calc(33% - 20px);
+    .footer-navigation {
+        margin-bottom: 12px;
     }
-
-    .post {
-        width: calc(50% - 13px);
+    .footer-navigation li {
+        font-size: 14px;
+        line-height: 160%;
+    }
+    .footer-navigation h2{
+        margin-bottom: 0;
+    }
+    .product {
+        width: calc(33% - 25px);
+    }
+    .catalog__container {
+        flex-direction: column;
+    }
+    .sidebar {
+        flex-direction: column-reverse;
+        padding: 40px 0 12px;
+        margin-bottom: 12px;
+        background: transparent;
+        line-height: 200%;
+    }
+    .sidebar li {
+        display: inline-block;
+    }
+    .sidebar h2 {
+        margin-top: 24px;
+        margin-bottom: 12px;
+        line-height: 100%;
+    }
+    .sidebar nav {
+        margin-bottom: 0;
+    }
+    .sidebar a {
+        margin-left: 0;
+        margin-right: 12px;
+    }
+    .filter {
+        flex-wrap: wrap;
+    }
+    .content {
+        padding-left: 0;
     }
 }
 
@@ -1346,14 +1412,25 @@ label:has(input[type="checkbox"]:checked) + .main-menu {
     .product {
             width: calc(50% - 17px);
         }
+    .sorting {
+        margin-left: 0;
+    }
+    .filter {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 12px;
+    }
+    .filter a {
+        margin-right: 24px;
+    }
+    .banner__tittle {
+        font-size: 36px;
+    }
 }
 
 @media screen and (max-width: 480px) {
     .header-buttons {
-            gap: 12px;
-        }
-    .product {
-            width: 100%;
+        gap: 12px;
         }
     .flover-card {
         flex-direction: column;
@@ -1369,6 +1446,9 @@ label:has(input[type="checkbox"]:checked) + .main-menu {
     .flover-card img {
         margin-bottom: 20px;
     }
+    .posts {
+        margin-bottom: 24px;
+    }
     .post {
         width: 100%;
     }
@@ -1377,10 +1457,12 @@ label:has(input[type="checkbox"]:checked) + .main-menu {
     }
     .footer-navigation {
         width: 100%;
-        margin-bottom: 24px;
     }
     .footer-links {
         margin-top: 0;
+    }
+    .footer-middle {
+        padding: 24px 24px 12px;
     }
     .header-buttons .button {
         display: none;
@@ -1388,13 +1470,17 @@ label:has(input[type="checkbox"]:checked) + .main-menu {
 }
 
 @media screen and (max-width: 376px) {
-    .filter {
-        align-items: flex-start;
-        flex-direction: column;
-        gap: 12px;
-    }
     .sorting {
         margin: 0;
+    }
+    .footer-form button {
+        font-size: 14px;
+    }
+    .posts {
+        margin-bottom: 24px;
+    }
+    .flover-card img {
+        width: 65%;
     }
 }
 
